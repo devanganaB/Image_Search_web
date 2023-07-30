@@ -1,77 +1,116 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Merriweather", serif;
 }
 
-body{
+body {
     line-height: 2;
 }
 
-h1{
+h1 {
     font-size: 35px;
     font-weight: bold;
     text-align: center;
     margin: 30px 0 50px 0;
 }
 
-form{
+form {
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#search-input{
+
+#search-input {
     width: 60%;
     max-width: 400px;
     padding: 10px 80px;
     border: none;
     border-radius: 20px;
-    box-shadow: 2px 5px 10px rgb(0,0,0,0.3);
+    box-shadow: 2px 5px 10px rgb(0, 0, 0, 0.3);
     font-size: 18px;
     color: rgb(24, 24, 24);
     margin-right: 10px;
 }
 
-#search-button{
+#search-button {
     padding: 10px 20px;
-    background:rgb(0, 200, 200);
+    background: rgb(0, 200, 200);
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 18px;
     cursor: pointer;
-    box-shadow: 2px 5px 10px rgb(0,0,0,0.3);
+    box-shadow: 2px 5px 10px rgb(0, 0, 0, 0.3);
 }
 
-.search-results{
+.search-results {
     display: flex;
     /* flex-direction: column; */
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: 0 auto;  
+    margin: 0 auto;
 }
 
-.search-res{
+.search-res {
     margin-bottom: 60px;
     width: 30%;
     height: 100%;
     border-radius: 5px;
-    box-shadow: 0 0 6px rgb(0,0,0,0.3);
+    box-shadow: 0 0 6px rgb(0, 0, 0, 0.3);
     overflow: hidden;
 }
 
-.search-res img{
+.search-res img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    transition: opacity 0.2s ease-in-out ;
+    transition: opacity 0.2s ease-in-out;
 }
 
-.search-res:hover img{
-opacity: 0.8;
+.search-res:hover img {
+    opacity: 0.8;
+}
+
+.search-res a {
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(24, 24, 24);
+    display: block;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+#show-more-button{
+    background-color: rgb(101, 208, 173);
+    font-size: 18px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .search-results{
+        padding: 20px;
+    }
+    .search-res{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .search-res{
+        width: 100%;
+    }
 }
